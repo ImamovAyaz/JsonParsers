@@ -11,9 +11,9 @@ public class GSON {
             Gson g = new Gson();
             Type personTypeObj = Person.class;
             Person person = g.fromJson(new FileReader("src/JSONExample01.json"), Person.class);
-            for (Person friend : person.friends) {
-                System.out.print(friend.lastName);
-                for (Phones phone : friend.phoneNumbers) {
+            for (Person friend : person.getFriends()) {
+                System.out.print(friend.getLastName());
+                for (Phones phone : friend.getPhoneNumber()) {
                     System.out.println(" - phone type: " + phone.type + ", phone number : " + phone.number);
                 }
             }

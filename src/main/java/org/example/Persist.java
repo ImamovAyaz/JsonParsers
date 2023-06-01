@@ -63,7 +63,7 @@ public class Persist {
 
             ObjectInputStream in = new ObjectInputStream(new FileInputStream("studentFOut.txt"));
             Student theStudent = (Student) in.readObject();
-            System.out.println(theStudent.id + " " + theStudent.firstName + " " + theStudent.course + " " + theStudent.fee);
+            System.out.println(theStudent.id + " " + theStudent.getFirstName() + " " + theStudent.course + " " + theStudent.fee);
             System.out.println(theStudent.creds.login + " " + theStudent.creds.password);
             for (String grade : theStudent.grades) {
                 System.out.println(grade);

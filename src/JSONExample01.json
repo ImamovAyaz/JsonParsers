@@ -28,18 +28,16 @@
           "type": "home",
           "number": "141 111-1234"
         }
-      ],
-      "friends": [
+      ]
+    },
+    {
+      "firstName": "UnknownFirstName",
+      "lastName": "UnknownLastName",
+      "age": 999,
+      "phoneNumbers": [
         {
-          "firstName": "UnknownFirstName",
-          "lastName": "UnknownLastName",
-          "age": 999,
-          "phoneNumbers": [
-            {
-              "type": "home",
-              "number": "000 000-0000"
-            }
-          ]
+          "type": "home",
+          "number": "000 000-0000"
         }
       ]
     },

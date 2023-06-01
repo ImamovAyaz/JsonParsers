@@ -11,9 +11,9 @@ public class Jackson {
             Person person = JSON.parseObject(new FileReader("src/JSONExample01.json"), Person.class);
             String jsonObject = JSON.toJSONString(person);
             Person newPerson = JSON.parseObject(jsonObject, Person.class);
-            for (Person friend : newPerson.friends) {
-                System.out.print(friend.lastName);
-                for (Phones phone : friend.phoneNumbers) {
+            for (Person friend : newPerson.getFriends()) {
+                System.out.print(friend.getLastName());
+                for (Phones phone : friend.getPhoneNumber()) {
                     System.out.println(" - phone type: " + phone.type + ", phone number : " + phone.number);
                 }
             }
