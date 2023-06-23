@@ -1,6 +1,8 @@
 package org.example;
 
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+import org.example.jsonParser.JsonElement;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -10,11 +12,17 @@ import java.util.List;
 public class Person implements Serializable {
     private static final long serialVersionUID = 1L;
     transient int id;
+    @JsonElement()
     private String firstName;
+    @JsonElement()
     private String lastName;
+    @JsonElement()
     private int age;
     private List<Phones> phoneNumbers = new ArrayList<>();
     private List<Person> friends = new ArrayList<>();
+
+    public Person() {
+    }
 
     public Person(String firstName, String lastName) {
         this.firstName = firstName;
@@ -24,6 +32,12 @@ public class Person implements Serializable {
     public Person(int id, String firstName) {
         this.id = id;
         this.firstName = firstName;
+    }
+
+    public Person(String firstName, String lastName, int age) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
     }
 
     public String getFirstName() {
@@ -40,6 +54,14 @@ public class Person implements Serializable {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public int getAge() {
+        return this.age;
+    }
+
+    public void setLastName(int age) {
+        this.age = age;
     }
 
     public List<Person> getFriends() {

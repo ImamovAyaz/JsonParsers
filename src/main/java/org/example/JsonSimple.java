@@ -1,7 +1,5 @@
 package org.example;
 
-import org.example.Person;
-import org.example.Phones;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
